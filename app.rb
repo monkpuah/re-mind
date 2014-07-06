@@ -1,4 +1,5 @@
 require 'sinatra'
+set :bind, '0.0.0.0'
 
 # This would be the 'default' route. All request to just '/' will go here
 get '/' do
