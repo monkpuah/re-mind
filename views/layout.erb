@@ -1,35 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-<meta charset="UTF-8">
-<title>
-  <%= 'Re-mind App' %>
-</title>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-<style>
- .main {
-  max-width:500px;
-  margin:0 auto;
-  }
-
-  h1, h2 {
-    text-align:center;
-  }
-</style>
+	<meta charset="utf8">
+	<title><%= @title + '| DogeMinder'%></title>
 </head>
 <body>
-<div class='main'>
-  <header>
-    <h1>Handling Form Data via POST</h1>
-    <h2>Just a simple example with some views attached</h2>
-  </header>
-  <div>
-    <%= yield %>
-  </div>
-</div>
+	<div class="header">
+		<h1>DogeMinder</h1>
+		<h3> Much Forgetful. Concern. So Reminder. </h3>
+	</div>
+	
+	<div id="main">
+		<%= yield %>
+	</div>
+
+	<div class="footer">
+		<p>A just for fun practice app.</p>
+	</div>
 </body>
 </html>
