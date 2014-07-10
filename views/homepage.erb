@@ -9,6 +9,7 @@
 <% @reminders.each do |reminder| %>
 	<p>
 		<%= reminder.content %>
+		<a href="/<%= reminder.id %>">[Edit]</a>
 	</p>
 	<p> 
 		Created: <%= reminder.created_at %>

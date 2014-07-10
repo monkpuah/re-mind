@@ -31,3 +31,17 @@ post '/' do
 	r.save
 	redirect '/'
 end
+
+get '/:id' do
+  @reminder = Reminder.get params[:id]
+  @title = "Edit Your Reminder"
+  erb :edit
+end
+
+put '/:id' do
+  r = Reminder.get params[:id]
+  r.content = params[:content]
+  r.updated_at = Time.now
+  r.save
+  redirect '/' 
+end
