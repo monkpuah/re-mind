@@ -1,0 +1,13 @@
+<form action="/<%= @reminder.id %>" method="post" id="delete">
+	<p id="delete_text"> Staph! You are deleting a reminder! Are you sure? </p>
+	<div class="whole_reminder">
+		<p>
+			<%= @reminder.content %> <br/>
+			Due on: <%= (@reminder.due_date).strftime("%a %b %e %Y %T") %> <br/>
+			Created: <%= (@reminder.created_at).strftime("%a %b %e %Y %T") %>
+		</p>
+	</div>
+	<input type="hidden" name="_method" value="delete">
+	<input type="submit" value="Much sure!">
+    <a href="/" class="option">[Cancel]</a>
+</form>

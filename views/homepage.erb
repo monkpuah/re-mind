@@ -1,17 +1,24 @@
 <div id="content">
 	<form role="form" class="form" action="/" method="post">
-  	<label>Don't forget!</label>
+  	<label>Don't forget! <br/></label>
   	<textarea name="content" placeholder="Remind me to..."></textarea>
+  	<p>Remind me on... <br/>
+  		<input id="datetimepicker" type="text" name="duedate">
+  	</p>
   	<input type="submit" value="Go!">
 	</form>
 </div>
 
 <% @reminders.each do |reminder| %>
-	<p>
-		<%= reminder.content %>
-		<a href="/<%= reminder.id %>">[Edit]</a>
-	</p>
-	<p> 
-		Created: <%= reminder.created_at %>
-	</p>
+	<div class="whole_reminder">
+		<p>
+			<%= reminder.content %><br/>
+			Due on: <%= (reminder.due_date).strftime("%a %b %e %Y %T") %> <br/>
+			Created: <%= (reminder.created_at).strftime("%a %b %e %Y %T") %>
+		</p>
+		<a href="/<%= reminder.id %>/edit" class="option">[Edit]</a>
+		<a href="/<%= reminder.id %>/delete" class="option">[Delete]</a>
+	</div>
+		
+	
 <% end %>

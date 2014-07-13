@@ -1,6 +1,13 @@
 
+<div id="content">
 	<form action="/<%= @reminder.id %>" method="post" id="edit">
 		<input type="hidden" name="_method" value="put">
+		<label>Now what? <br/></label>
 		<textarea name="content"><%= @reminder.content %></textarea>
+		<p>
+			Due-date: 
+			<input id="datetimepicker" type="text" name="duedate" placeholder="<%= @reminder.due_date %>">
+		</p>
 		<input type="submit">
 	</form>
+</div>

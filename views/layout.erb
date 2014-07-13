@@ -1,21 +1,33 @@
 <!doctype html>
 <html>
 <head>
+
 	<meta charset="utf8">
 	<title><%= @title + '| DogeMinder'%></title>
+	<link rel="stylesheet" href="/jquery.datetimepicker.css">
+	<link rel="stylesheet" href="/simplestyle.css">
+  	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  	<script src="/jquery.datetimepicker.js"></script>
+  	<script>
+  		$(function() {
+    		$('#datetimepicker').datetimepicker();
+  		});
+  	</script>
 </head>
 <body>
-	<div class="header">
-		<h1>DogeMinder</h1>
-		<h3> Much Forgetful. So Concern. Such Reminder. </h3>
-	</div>
+	<div class="all">
+		<div class="header">
+			<h1>DogeMinder</h1>
+			<h3> Much Forgetful. So Concern. Such Reminder. </h3>
+		</div>
 	
-	<div id="main">
-		<%= yield %>
-	</div>
+		<div id="main">
+			<%= yield %>
+		</div>
 
-	<div class="footer">
-		<p>A just for fun practice app.</p>
+		<div class="footer">
+			<p>A just for fun practice app.</p>
+		</div>
 	</div>
 </body>
 </html>
